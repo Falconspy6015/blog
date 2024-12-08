@@ -20,7 +20,7 @@ paginate = 5
 
   # Logo settings
   [params.logo]
-    logoText = "hugo-theme-cleanwhite"
+    logoText = "Falconspy6015"
     logoHomeLink = "/"
 
   # Table of contents settings (optional)
@@ -33,7 +33,7 @@ paginate = 5
     title = "Falconspy6015"
 
     [languages.en.params]
-      subtitle = "A simple, retro theme for Hugo"
+      subtitle = "Connecting to the world one post at a time"
       owner = ""
       keywords = ""
       copyright = ""
