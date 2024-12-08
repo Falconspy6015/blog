@@ -1,6 +1,59 @@
-baseURL = 'https://falconspy6015.github.io/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme="terminal"
+baseurl = "/"
+languageCode = "en-us"
+theme = "terminal"
+paginate = 5
+
 [params]
-showPostsOnHomepage = true
+  contentTypeName = "posts"
+  showMenuItems = 2
+  showLanguageSelector = false
+  fullWidthTheme = false
+  centerTheme = false
+  autoCover = true
+  showLastUpdated = false
+  showPostsOnHomepage = true
+
+  # Twitter card settings
+  [params.twitter]
+    creator = ""
+    site = ""
+
+  # Logo settings
+  [params.logo]
+    logoText = "hugo-theme-cleanwhite"
+    logoHomeLink = "/"
+
+  # Table of contents settings (optional)
+  Toc = false
+  TocTitle = "Table of Contents"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "Falconspy6015"
+
+    [languages.en.params]
+      subtitle = "A simple, retro theme for Hugo"
+      owner = ""
+      keywords = ""
+      copyright = ""
+      menuMore = "Show more"
+      readMore = "Read more"
+      readOtherPosts = "Read other posts"
+      newerPosts = "Newer posts"
+      olderPosts = "Older posts"
+      missingContentMessage = "Page not found..."
+      missingBackButtonLabel = "Back to home page"
+      minuteReadingTime = "min read"
+      words = "words"
+
+      [languages.en.menu]
+        [[languages.en.menu.main]]
+          identifier = "about"
+          name = "About"
+          url = "/about"
+        [[languages.en.menu.main]]
+          identifier = "showcase"
+          name = "Showcase"
+          url = "/showcase"
+
