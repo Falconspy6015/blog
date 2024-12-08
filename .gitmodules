@@ -1,0 +1,4 @@
+[submodule "falconspyblog/public"]
+	path = falconspyblog/public
+	url = https://github.com/Falconspy6015/falconspy6015.github.io.git
+	branch = main
