@@ -1,90 +1,71 @@
-baseurl = "/"
-languageCode = "en-us"
+title = "FalconBlog"
+baseURL = 'https://falconspy6015.github.io/'
+languageCode = 'en-us'
+defaultContentLanguage = "en-gb"
+enableEmoji = true
+
 theme = "hugo-blog-awesome"
-paginate = 5
 
-# General Parameters
-[params]
-  contentTypeName = "posts"
-  showMenuItems = 3   # Show 3 menu items, can be adjusted
-  showLanguageSelector = false
-  fullWidthTheme = true  # Use the full width theme for a more modern look
-  centerTheme = true     # Center theme content for better readability
-  autoCover = true       # Automatically use cover images if available
-  showLastUpdated = true # Show last updated date on posts
-  showPostsOnHomepage = true
+[Menus]
+  [[Menus.main]]
+    identifier = "blog"
+    name = "Blog"
+    title = "Blog posts"
+    url = "/posts/"
+    weight = 1
 
-  # Optional: Customize the homepage description (for SEO and layout)
-  homeDescription = "Welcome to my blog, where I explore technology, programming, and life."
-  homepageBackground = "#f7f7f7"  # Soft background color for the homepage
+  [[Menus.main]]
+    identifier = "About"
+    name = "About"
+    title = "About Myself"
+    url = "/about/"
+    weight = 2
+    
+  [[Menus.main]]
+    identifier = "Showcase"
+    name = "Showcase"
+    title = "My milestones"
+    url = "/showcase/"
+    weight = 3
 
-  # Social media (adjust these if you want to link your social media)
-  [params.social]
-    twitter = "your-twitter-handle"
-    github = "your-github-handle"
-    linkedin = "your-linkedin-handle"
 
-  # Logo settings (you can change this to match your style)
-  [params.logo]
-    logoText = "Falconspy6015"
-    logoHomeLink = "/"
+[Languages.en-gb.params]
+  sitename = "FalconBlog"
+  defaultColor = "dark" 
+  description = "A space where creativity meets expression, and ideas come to life."
+  mainSections = ['posts']
+  toc = true # set to false to disable table of contents 'globally'
+  tocOpen = false # set to true to open table of contents by default
+  goToTop = true # set to false to disable 'go to top' button
+  dateFormat = ""
+  rssFeedDescription = "summary" # available options: 1) summary 2) full
+  # summary - includes a short summary of the blog post in the RSS feed. Generated using Hugo .Summary .
+  # full - includes full blog post in the RSS feed. Generated using Hugo .Content .
+  # By default (or if nothing is specified), summary is used.
 
-  # Table of contents settings (optional)
-  Toc = true
-  TocTitle = "Table of Contents"
+[Languages.en-gb.params.author]
+  avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
+  # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
+  intro = "FalconBlog"
+  name = "Falconspy6015"
+  description = "A space where creativity meets expression, and ideas come to life."
+ content = """"Welcome to my blog! I'm a first-year B.Tech student in Electrical Engineering at IIT Madras with a passion for technology and innovation. Here, I share my thoughts, projects, and discoveries in areas like cybersecurity, web and app development, and programming. This blog is my space to document my journey, exchange ideas, and hopefully inspire others in the tech community. Join me as I explore, learn, and create!"""
+[params.about]
+enable = true
+title = "Welcome to My Blog"
+content = """"Welcome to my blog! I'm a first-year B.Tech student in Electrical Engineering at IIT Madras with a passion for technology and innovation. Here, I share my thoughts, projects, and discoveries in areas like cybersecurity, web and app development, and programming. This blog is my space to document my journey, exchange ideas, and hopefully inspire others in the tech community. Join me as I explore, learn, and create.Thank you for visiting!"""
 
-  # Enable/disable certain post features
-  enableReadingTime = true    # Display reading time on posts
-  enableComments = false      # You can enable this if you want comments on your posts
+# Allow to override webmanifest options
+[Languages.en-gb.params.webmanifest]
+  name = "sitename" # will use "params.sitename" or "title" by default
+  short_name = "sitename" # same as name
+  start_url = "/" # will use homepage url by default
+  theme_color = "#434648" # default is "#434648" (base color of text). Also will override html `<meta name="theme-color" />`
+  background_color = "#fff" # by default depend on "params.defaultColor" for "light" or "auto" will be set to "#fff" for dark will be "#131418" (color of dark mode background)
+  display = "standalone"
 
-# Menu settings for navigation links
-[languages]
-  [languages.en]
-    languageName = "English"
-    title = "Falconspy6015 Blog | Tech & Programming"
 
-    [languages.en.params]
-      subtitle = "Connecting to the world one post at a time"
-      owner = "Falconspy6015"
-      keywords = "technology, programming, blog"
-      copyright = "2024 Falconspy6015. All rights reserved."
-      menuMore = "Show more"
-      readMore = "Read more"
-      readOtherPosts = "Read other posts"
-      newerPosts = "Newer posts"
-      olderPosts = "Older posts"
-      missingContentMessage = "Page not found..."
-      missingBackButtonLabel = "Back to home page"
-      minuteReadingTime = "min read"
-      words = "words"
+[services]
 
-      # Navigation menu
-      [languages.en.menu]
-        [[languages.en.menu.main]]
-          identifier = "about"
-          name = "About"
-          url = "/about"
-          weight = 1
-
-        [[languages.en.menu.main]]
-          identifier = "showcase"
-          name = "Showcase"
-          url = "/showcase"
-          weight = 2
-
-        [[languages.en.menu.main]]
-          identifier = "contact"
-          name = "Contact"
-          url = "/contact"
-          weight = 3  # Add a contact page if necessary
-
-        [[languages.en.menu.main]]
-          identifier = "blog"
-          name = "Blog"
-          url = "/posts"
-          weight = 4  # Link to blog post list
-
-# Optional: Settings for post listing page
-[permalinks]
-  posts = "/posts/:year/:month/:day/:slug/"
-
+  [services.googleAnalytics]
+ 
