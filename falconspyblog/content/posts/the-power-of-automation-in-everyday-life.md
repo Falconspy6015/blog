@@ -1,7 +1,7 @@
 ---
-title: "The Power of Automation in Everyday Life"
+title: The Power of Automation in Everyday Life
 date: 2024-12-08
-author: "Falconspy6015"
+author: Falconspy6015
 tags:
   - Automation
   - Technology
